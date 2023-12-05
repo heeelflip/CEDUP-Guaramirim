@@ -43,7 +43,7 @@ h2.titulo {
     text-align: center;
 }
 
-button:hover{
+button:hover, form .btn-enviar input:hover{
     box-shadow: 0px 0px 8px #171f32;
     transform: scale(1.05);
 }
@@ -80,6 +80,76 @@ header nav ul li{
     display: inline-block;
     padding: 0 40px;
 }
+
+/* ESTILO SUB-MENU */
+ul.menu,
+    .menu li,
+    .menu a {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    ul.menu ul {
+        position: absolute;
+        display: none;
+        box-shadow: 3px 3px 2px #333;
+    }
+
+    /* Configurações nivel 1*/
+    ul.menu {
+        float: left;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 0 5px;
+    }
+
+    .menu li {
+        float: left;
+        width: auto;
+        position: relative;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 0 20px;
+        line-height: 45px;
+        height: 40px;
+        float: left;
+        transition: all 0.2s linear;
+
+    }
+
+    /* Configurações nivel 2*/
+    .menu li:hover>ul.submenu-1 {
+        display: block;
+        top: 45px;
+        left: 0;
+        padding: 5px;
+        width: 169px;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .menu ul.submenu-1 a {
+        width: 160px;
+        padding: 0 20px;
+        border-radius: 5px;
+    }
+
+    .submenu-1 {
+        background: #39a8e0e8;
+    }
+
+    .submenu-1 a {
+        color: #000;
+    }
+
+    .submenu-1 li:hover>a {
+        background: #666;
+    }
+
 
 
 
@@ -274,9 +344,10 @@ form{
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    margin-top: 40px;
 
 }
-form input{
+form input, form textarea{
     width: 100%;
     background-color: #3d3d3d;
     border: none;
@@ -287,7 +358,37 @@ form input{
     font-size: 18px;
 }
 
-form input::placeholder{
-    
+form textarea{
+    resize: none;
+    max-height: 200px;
 }
 
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input[type = submit]{
+width: 120px;
+background-color: #396adb;
+color: #FFF;
+font-weight: 700;
+cursor: pointer;
+transition: .2s;
+}
+
+/* ESTILO RODAPE */
+
+footer{
+    padding: 120px 4%;
+    box-shadow: 0 0 40px 10px #171f322a;
+
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer img{
+    max-height: 80px;
+}

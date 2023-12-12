@@ -174,7 +174,7 @@ ul.menu {
     width: 0%;
     overflow: hidden;
     transition: .3s;
-    display: none;
+  
 }
 
 .menu-mobile.abrir-menu ~ .overlay-menu{
@@ -505,7 +505,9 @@ footer .line-footer p a:hover {
 .btn-abrir-menu {
     display: none;
 }
-
+.menu-mobile{
+  display: none;
+}
 
 @media screen and (max-width: 1030px) {
 

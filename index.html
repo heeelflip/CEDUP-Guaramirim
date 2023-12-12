@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:wght@200&display=swap"
+        rel="stylesheet">
     <!-- FIM GOOGLE FONTS -->
 
     <!-- BOOTSTRAP -->
@@ -16,9 +19,13 @@
     <!-- FIM BOOTSTRAP -->
 
     <link rel="stylesheet" href="estilo/style.css">
+    <script src="menu.js" defer></script>
+
+
     <title>CEDUP Guaramirim</title>
 
 </head>
+
 <body>
 
     <header>
@@ -27,7 +34,7 @@
             <div class="logo">
 
                 <a href="#">
-                <img src="images/logo2.png" alt="Logo CEDUP">
+                    <img src="images/logo2.png" alt="Logo CEDUP">
                 </a>
 
             </div> <!--logo-->
@@ -35,40 +42,59 @@
             <nav class="menu-desktop">
 
                 <ul class="menu">
-                    <li><a href="#">Início</a></li>
+                    <li><a href="https://heeelflip.github.io/CEDUP-Guaramirim/">Início</a></li>
                     <li><a href="#">Cursos</a>
                         <ul class="submenu-1">
-                        <!-- Esse é o 2 nivel ou o primeiro Drop Down -->
+                            <!-- Esse é o 2 nivel ou o primeiro Drop Down -->
                             <li><a href="#">Submenu 1</a></li>
                             <li><a href="#">Submenu 2</a></li>
                             <li><a href="#">Submenu 3</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Eventos</a></li>
-                    <li><a href="#">Matrículas</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="https://matriculaonline.sed.sc.gov.br/inicio.aspx">Matrículas</a></li>
                     <li><a href="#">Sobre o CEDUP</a>
                         <ul class="submenu-1">
                             <!-- Esse é o 2 nivel ou o primeiro Drop Down -->
-                                <li><a href="#">Quem somos</a></li>
-                                <li><a href="#">Infraestrutura</a></li>
-                                <li><a href="#">Submenu 3</a></li>
-                            </ul>
+                            <li><a href="quem-somos.HTML">Quem somos</a></li>
+                            <li><a href="#">Infraestrutura</a></li>
+                            <li><a href="#turmas">Turmas</a></li>
+                        </ul>
                     </li>
                 </ul>
-            </nav>  <!--menu-desktop-->         
+            </nav> <!--menu-desktop-->
 
-            <div class="btn-contato">
-                <a href="#">
-                    <button>
-                    Entre em contato
-                    </button>
-                </a>
-            </div> <!--btn-contato-->
+            <div class="btn-contato"><a href="#"><button>Entre em contato</button></a></div>
 
-            </div> <!--interface-->
+            <div class="btn-abrir-menu" id = "btn_menu">
+                <i class="bi bi-list"></i>
+            </div>
 
-        </div><!--interface-->
-        
+            <div class="menu-mobile" id = "menu_mobile">
+
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#eventos">Eventos</a></li>
+                        <li><a href="#">Matrículas</a></li>
+                        <li><a href="#">Sobre o CEDUP</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav> <!--menu-mobile-->
+            </div> <!--menu-mobile-->
+            
+            <div class="overlay-menu" id="overlay-menu">
+                
+            </div>
+
+        </div> <!--interface-->
+
     </header> <!--header-->
 
 
@@ -80,19 +106,18 @@
                     <div class="txt-topo-site">
 
                         <h1>O CEDUP é onde aprendizado e prática se unem rumo ao sucesso<span>.</span></h1>
-                        <p>Somos uma escola com cursos tecnicos e integrados para o Ensino Medio que ensina o que você precisa para conquistar a sua vaga no mercado de trabalho. <br>
-                            “Preparar o educando para o exercício da cidadania e para o mundo do trabalho, resgatando valores éticos, morais e culturais."
+                        <p>Somos uma escola com cursos tecnicos e integrados para o Ensino Medio que ensina o que você
+                            precisa para conquistar a sua vaga no mercado de trabalho. <br>
+                            “Preparar o educando para o exercício da cidadania e para o mundo do trabalho, resgatando
+                            valores éticos, morais e culturais."
                         </p>
 
-                        <h1>O CEDUP é onde Aprendizado e Prática Se Unem Rumo ao Sucesso<span>.</span></h1>
-                        <p>Somos uma escola com cursos tecnicos e integrados para o Ensino Medio que ensina o que você precisa para conquistar a sua vaga no mercado de trabalho.</p>
 
-                        
                         <div class="btn-contato">
                             <a href="#">
                                 <Button>
 
-                                    Trabalhe conosco 
+                                    Trabalhe conosco
 
                                 </Button>
                             </a>
@@ -106,9 +131,9 @@
         </section> <!-- topo-site -->
 
 
-        <section class="eventos">
+        <section class="eventos" id="eventos" name="eventos">
 
-            <div class="interface">
+            <div class="interface" >
                 <h2 class="titulo">EVENTOS</h2>
                 <div class="flex">
 
@@ -116,24 +141,27 @@
 
                         <img src="images/logo.png" alt="#">
                         <h3>Nome Evento</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Aliquam dictum mi quis nunc interdum, a tincidunt justo tristique. Fusce in venenatis enim.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Aliquam dictum mi quis nunc interdum, a tincidunt justo tristique. Fusce in venenatis enim.
+                        </p>
 
                     </div>
                     <div class="eventos-box">
 
                         <img src="images/logo.png" alt="#">
                         <h3>Nome Evento</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Aliquam dictum mi quis nunc interdum, a tincidunt justo tristique. Fusce in venenatis enim.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Aliquam dictum mi quis nunc interdum, a tincidunt justo tristique. Fusce in venenatis enim.
+                        </p>
 
                     </div>
                     <div class="eventos-box">
 
                         <img src="images/logo.png" alt="#">
                         <h3>Nome Evento</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Aliquam dictum mi quis nunc interdum, a tincidunt justo tristique. Fusce in venenatis enim. </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Aliquam dictum mi quis nunc interdum, a tincidunt justo tristique. Fusce in venenatis enim.
+                        </p>
 
                     </div>
 
@@ -153,12 +181,15 @@
                     <div class="txt-sobre">
 
                         <h2>EXEMPLO TITULO</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mi quis nunc interdum, a tincidunt justo tristique. Fusce in venenatis enim. 
-                            Morbi eu aliquam neque, nec commodo libero. Duis at varius ante, vel sagittis felis. Aenean lorem lorem, elementum non lorem eget, congue consequat odio. 
-                            Quisque ultricies pulvinar nunc ac fermentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla consequat
-                             id velit ut pellentesque. Quisque laoreet vulputate sagittis.</p>
-                        
-                            
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mi quis nunc
+                            interdum, a tincidunt justo tristique. Fusce in venenatis enim.
+                            Morbi eu aliquam neque, nec commodo libero. Duis at varius ante, vel sagittis felis. Aenean
+                            lorem lorem, elementum non lorem eget, congue consequat odio.
+                            Quisque ultricies pulvinar nunc ac fermentum. Class aptent taciti sociosqu ad litora
+                            torquent per conubia nostra, per inceptos himenaeos. Nulla consequat
+                            id velit ut pellentesque. Quisque laoreet vulputate sagittis.</p>
+
+
                         <div class="btn-social">
 
                             <a href="https://www.instagram.com/cedupguaramirim/">
@@ -199,21 +230,21 @@
             </div>
         </section> <!-- sobre -->
 
-        <section class="turmas">
+        <section class="turmas" id="turmas">
             <div class="interface">
                 <h2 class="titulo">TURMAS <span>FORMADAS.</span></h2>
                 <div class="flex">
-                    <div class="img-turma" style="background-image: url(images/turma\ adm\ 2021-2.jfif);">
+                    <div class="img-turma" style="background-image: url(images/turma\ adm.jpeg);">
                         <div class="overlay">
                             turma adm 2021-2
                         </div>
                     </div>
-                    <div class="img-turma" style="background-image: url(images/turma\ adm\ 2021-2.jfif);">
+                    <div class="img-turma" style="background-image: url(images/turma\ adm.jpeg);">
                         <div class="overlay">
                             turma adm 2021-2
                         </div>
                     </div>
-                    <div class="img-turma" style="background-image: url(images/turma\ adm\ 2021-2.jfif);">
+                    <div class="img-turma" style="background-image: url(images/turma\ adm.jpeg);">
                         <div class="overlay">
                             turma adm 2021-2
                         </div>
@@ -225,7 +256,7 @@
         <section class="formulario">
             <div class="interface">
                 <h2 class="titulo">FALE <span>CONOSCO.</span></h2>
-                <form action="">
+                <form action="mailto:cedupguaramirim@sed.sc.gov.br">
                     <input type="text" name="" id="" placeholder="Seu nome:">
                     <input type="text" name="" id="" placeholder="Seu e-mail:">
                     <input type="text" name="" id="" placeholder="Seu celular:">
@@ -235,41 +266,43 @@
                     </div>
                 </form>
             </div> <!-- interface -->
-        </section>  <!-- formulario -->
+        </section> <!-- formulario -->
 
     </main>
 
-   <footer>
-    <div class="interface">
-        <div class="line-footer">
-            <div class="flex">
-                <div class="logo-footer">
-                    <img src="images/logo.png" alt="Logotipo CEDUP">
-                </div>
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="images/logo.png" alt="Logotipo CEDUP">
+                        <img src="images/logo sed.png" alt="">
+                    </div>
 
-                <div class="btn-social">
-                    <a href="https://www.instagram.com/cedupguaramirim/"><button><i class="bi bi-instagram"></i></button></a>
+                    <div class="btn-social">
+                        <a href="https://www.instagram.com/cedupguaramirim/"><button><i
+                                    class="bi bi-instagram"></i></button></a>
 
-                    <a href="https://www.facebook.com/cedup.guaramirim?locale=pt_BR"><button><i class="bi bi-facebook"></i></button></a>
+                        <a href="https://www.facebook.com/cedup.guaramirim?locale=pt_BR"><button><i
+                                    class="bi bi-facebook"></i></button></a>
 
-                    <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
+                        <a href="#"><button><i class="bi bi-whatsapp"></i></button></a>
 
-                    <a href="https://www.linkedin.com/company/cedup-perfeito-manoel-de-aguiar/ "><button> <i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://www.linkedin.com/company/cedup-perfeito-manoel-de-aguiar/ "><button> <i
+                                    class="bi bi-linkedin"></i></button></a>
 
-                </div> <!-- btn-social -->
-         </div> <!-- flex -->
-        </div> <!-- line-footer -->
+                    </div> <!-- btn-social -->
+                </div> <!-- flex -->
+            </div> <!-- line-footer -->
 
-        <div class="line-footer">
-            <p><i class="bi bi-envelope"></i><a href="mailto:cedupguaramirim@sed.sc.gov.br">cedupguaramirim@sed.sc.gov.br</a></p>
-        </div> <!-- line-footer -->
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope"></i><a
+                        href="mailto:cedupguaramirim@sed.sc.gov.br">cedupguaramirim@sed.sc.gov.br</a></p>
+            </div> <!-- line-footer -->
 
-    </div> <!-- interface -->
-   </footer> <!-- footer -->
-    
+        </div> <!-- interface -->
+    </footer> <!-- footer -->
+
 </body>
+
 </html>
-
-    
-
-
